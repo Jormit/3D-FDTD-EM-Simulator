@@ -1,4 +1,4 @@
-# 3D-FDTD-EM-Simulator
+# 3D FDTD EM Simulator
 3D Finite-Difference-Time-Domain electromagnetic simulator in python. Cython is used to speed up critical code and MayaVi is used for plotting. This is based on the theory outlined by this set of notes - https://eecs.wsu.edu/~schneidj/ufdtd/ (pages 244-248).
 
 To use, first compile using:
