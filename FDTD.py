@@ -28,7 +28,7 @@ co = np.zeros((points_x, points_y, points_z)) # Conductivity
 fdtd(dt, dx, steps, points_x, points_y, points_z, ex, ey, ez, hx, hy, hz, mu, ep, co)
 
 # Plot using mayavi
-mlab.figure()
+mlab.figure(bgcolor=(0,0,0))
 mlab.volume_slice(np.abs(ez[steps-1]), vmax=0.01, plane_orientation="x_axes")
 mlab.volume_slice(np.abs(ez[steps-1]), vmax=0.01, plane_orientation="y_axes")
 mlab.volume_slice(np.abs(ez[steps-1]), vmax=0.01, plane_orientation="z_axes")
