@@ -1,6 +1,5 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
+from mayavi import mlab
 from FDTD import fdtd
 
 # Settings
@@ -20,7 +19,6 @@ hx = np.zeros((steps, points_x, points_y, points_z));
 hy = np.zeros((steps, points_x, points_y, points_z));
 hz = np.zeros((steps, points_x, points_y, points_z));
 
-
 # Material Properties
 mu = np.ones((points_x, points_y, points_z)) # Permeability
 ep = np.ones((points_x, points_y, points_z)) # Permittivity
@@ -29,5 +27,11 @@ co = np.zeros((points_x, points_y, points_z)) # Conductivity
 # Pass to C code for main processing loop
 fdtd(dt, dx, steps, points_x, points_y, points_z, ex, ey, ez, hx, hy, hz, mu, ep, co)
 
-plt.imshow(ez[steps-1, 45, :, :], animated=True, cmap='jet')
-plt.show()
+# Plot using mayavi
+mlab.figure()
+mlab.volume_slice(np.abs(ez[steps-1]), vmax=0.01, plane_orientation="x_axes")
+mlab.volume_slice(np.abs(ez[steps-1]), vmax=0.01, plane_orientation="y_axes")
+mlab.volume_slice(np.abs(ez[steps-1]), vmax=0.01, plane_orientation="z_axes")
+mlab.title("Z Electric Field")
+mlab.colorbar()
+mlab.show()
