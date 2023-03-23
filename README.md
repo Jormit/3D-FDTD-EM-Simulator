@@ -9,6 +9,8 @@ Then run using
 ```
 python FTDT.py
 ```
-Example radiation from an infinitesimal dipole source:
-
+## Example
+### Radiation from an Infinitesimal Dipole Source:
 ![image](https://user-images.githubusercontent.com/15094591/224673047-cfafb9f4-5857-4961-8a87-f215a050f227.png)
+### Wave propogation on conductors:
+![image](https://user-images.githubusercontent.com/15094591/227383452-fb75f164-f24a-4fc9-8678-d674bdf4891d.png)
