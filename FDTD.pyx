@@ -8,7 +8,8 @@ ctypedef np.double_t DTYPE_t
 def fdtd(double dt, double dx, int steps, int points_x, int points_y, int points_z,
          np.ndarray [DTYPE_t, ndim=4] ex, np.ndarray [DTYPE_t, ndim=4] ey, np.ndarray [DTYPE_t, ndim=4] ez,
          np.ndarray [DTYPE_t, ndim=4] hx, np.ndarray [DTYPE_t, ndim=4] hy, np.ndarray [DTYPE_t, ndim=4] hz,         
-         np.ndarray [DTYPE_t, ndim=3] mu, np.ndarray [DTYPE_t, ndim=3] ep, np.ndarray [DTYPE_t, ndim=3] co):
+         np.ndarray [DTYPE_t, ndim=3] mu, np.ndarray [DTYPE_t, ndim=3] ep, np.ndarray [DTYPE_t, ndim=3] co,
+         np.ndarray [DTYPE_t, ndim=1] s):
 
     cdef int t, x, y, z
     cdef DTYPE_t Sc = dt/dx
@@ -57,4 +58,4 @@ def fdtd(double dt, double dx, int steps, int points_x, int points_y, int points
         ez[t, 0, :, :] = ez[t - 1, 1, :, :] + (Sc - 1) / (Sc + 1) * (ez[t, 1, :, :] - ez[t - 1, 0, :, :])
         ez[t, :, 0, :] = ez[t - 1, :, 1, :] + (Sc - 1) / (Sc + 1) * (ez[t, :, 1, :] - ez[t - 1, :, 0, :])
 
-        ez[t, 25, 25, 25] += np.sin(t * dt)
+        ez[t, 25, 25, 25] += s[t]
