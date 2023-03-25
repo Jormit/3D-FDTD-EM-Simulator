@@ -10,7 +10,10 @@ Then run using
 python FTDT.py
 ```
 ## Example
-### Radiation from an Infinitesimal Dipole Source:
-![image](https://user-images.githubusercontent.com/15094591/224673047-cfafb9f4-5857-4961-8a87-f215a050f227.png)
-### Wave propogation on conductors:
-![image](https://user-images.githubusercontent.com/15094591/227383452-fb75f164-f24a-4fc9-8678-d674bdf4891d.png)
+### Wave propagation between 2 parallel conductors:
+#### Problem Setup
+![image](https://user-images.githubusercontent.com/15094591/227667799-9311bc6d-fb7a-45e5-abdc-068fc99223c8.png)
+#### Ez Field Magnitude
+![image](https://user-images.githubusercontent.com/15094591/227667727-3e63bebb-82cc-4769-83a1-96f6de9db597.png)
+### E Vector Field:
+![image](https://user-images.githubusercontent.com/15094591/227667782-0787677e-476f-4385-abb4-46337218375c.png)
