@@ -10,11 +10,10 @@ Then run using
 python FTDT.py
 ```
 ## Example
-### Problem Setup
 A simulation of fields around 2 parallel conductors. Blue element is a sinusoidal voltage source and brown elements are conductors.
 
 ![image](https://user-images.githubusercontent.com/15094591/229079181-e978ea6f-7fac-49f4-bbae-f8232f0f7ce0.png)
 
-The program can solve for both the magnetic field and electric fields. Below is a plot of the z electric field magnitude as a volume slice.
+Magnitude of E-field in the Z direction
 
 ![image](https://user-images.githubusercontent.com/15094591/229078004-dd4a748e-760e-468b-a18b-f0635a206349.png)
